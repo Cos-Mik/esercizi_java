@@ -1,6 +1,6 @@
 package cosmik.es_05;
 
-public class Pilota {
+public class Pilota { // extends Persona? no?
 	private String nome;
 	private int vittorie;
 

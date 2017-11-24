@@ -14,11 +14,21 @@ public class ContoBancario {
 		this.numero_conto = numero_conto;
 	}
 
-	public String toString(int codice_inserito) {
-		if (codice_inserito == PASSWORD) {
-			return "Dettagli del conto:\nNome:\t"+nome+"\nCognome:\t"+cognome+"\nNumero di conto:\t"+numero_conto+"\n\t\tTotale: \t E. "+totaleconto;
+
+	// non ha senso usare toString in questo caso
+	// perche' toString non ha il compito di cercare di accedere al conto,
+	// ma di dare una descrizione dell'oggetto
+	// il tuo metodo non veniva considerata come un override di Object.toString(), ma di un metodo a parte
+	public String toString() {
+		return "Dettagli del conto:\nNome:\t"+nome+"\nCognome:\t"+cognome+"\nNumero di conto:\t"+numero_conto+"\n\t\tTotale: \t E. "+totaleconto;
+	}
+
+	public void tryAccess(int codice_inserito) {
+		if (codice_inserito != PASSWORD) {
+			// Qua sarebbe buono creare un'eccezione speciale per un accesso errato
+			throw new Exception("Errore: la password non e' corretta!"); 
 		} else {
-			return "Errore: la password non e' corretta!";
+			// all good
 		}
 	}
 }

@@ -24,7 +24,14 @@ public class Persona {
 		telefono = t;
 	}
 
+	// mancano i getter
+
 	public String dettagli() {
 		return nome+" "+cognome+": "+telefono;
+	}
+
+	public String toString() {
+		return dettagli();
+		// ho sentito il bisogno di aggiungerlo
 	}
 }

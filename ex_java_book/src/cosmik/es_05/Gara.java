@@ -3,7 +3,7 @@ package cosmik.es_05;
 public class Gara {
 	private String nomeGara;
 	private int tempoGara;
-	private boolean meteo = Math.random() < 0.5;
+	private boolean meteo = Math.random() < 0.5; // il meteo e' un boolean?
 	private Auto[] griglia_auto;
 	private Pilota[] griglia_piloti;
 	private int winner;
@@ -39,7 +39,7 @@ public class Gara {
 
 	//il metodo setTempo mi ritornerà il tempoGara con valore casuale fra 2 e 5
 	//una garà non durerà meno di 2 ore
-	private void setTempo () {
+	private void setTempo () { // perche' setTempo e' private?
 		int t = (int)(Math.random()*5);
 		while (t < 2) {
 			t = (int)(Math.random()*5);
