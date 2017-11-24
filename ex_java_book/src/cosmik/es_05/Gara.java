@@ -16,13 +16,23 @@ public class Gara {
 	}
 
 	private void iniziaGaraConPiloti() {
-		if (meteo == true) {
+		if (meteo) { // scrivere == true e' ridondante, perche' if gia' vuole un boolean, non c'e' bisogno di fare operazioni in piu'
 			System.out.println("Signori e Signore!! Benvenuti alla gara "+nomeGara+"!\nRombino i motori!!\n\n");
 			griglia_piloti = new Pilota[4];
 			griglia_piloti [0] = new Pilota("Crash",45);
 			griglia_piloti [1] = new Pilota("Coco",32);
 			griglia_piloti [2] = new Pilota("Polar Bear",8);
 			griglia_piloti [3] = new Pilota("Aku Aku",1856);
+			/* ti spiego come funziona il metodo addAll
+			Pilota[] piloti = {
+				new Pilota("Tizio"),
+				new Pilota("Caio"),
+				new Pilota("Sempronio")
+			};
+			griglia_piloti.addAll(piloti);
+
+			Forse si puo' usare l'array literal (la sintassi con le graffe) direttamente in addAll, testalo.
+			*/
 			griglia_auto = new Auto[4];
 			griglia_auto[0] = new Auto("Wumpa",griglia_piloti[0]);
 			griglia_auto[1] = new Auto("Pura",griglia_piloti[1]);
@@ -40,10 +50,12 @@ public class Gara {
 	//il metodo setTempo mi ~~ritornerà~~ setta il tempoGara con valore casuale fra 2 e 5
 	//una garà non durerà meno di 2 ore
 	private void setTempo () { // perche' setTempo e' private?
-		/*int t = (int)(Math.random()*5);
+		/*
+		int t = (int)(Math.random()*5);
 		while (t < 2) {
 			t = (int)(Math.random()*5);
-		}*/
+		}
+		*/
 		// Il codice sopra e' sbagliato, si fa cosi' un numero casuale tra 2 e 5, se non hai Random.nextInt(int,int)
 		tempoGara = (int)(Math.random() * 3.0 + 2.5);
 		// Aggiungo 0.5 perche' il cast da double a int taglia totalmente la parte decimale
@@ -60,11 +72,12 @@ public class Gara {
 			griglia_piloti[winner].getDettagliPilota()+" ha conseguito nella sua carriera "+griglia_piloti[winner].getDettagliVittorie()+" vittorie!\n"+
 			"Ci dica cosa ne pensa!\n"+griglia_piloti[winner].getDettagliPilota()+": \""+commenti[winner]+"\"";
 		} else {
-			return "";
+			return "La gara non e' stata giocata";
 		}
 	}
 
 	private void setNomeGara(String nG) {
+		// perche' creare un setter privato se non fai il getter? A sto punto settavi direttamente il nome nel costruttore
 		nomeGara = nG;
 	}
 }
