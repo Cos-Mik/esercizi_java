@@ -1,0 +1,11 @@
+devono esserci le classi main, pilota, auto e gara
+
+nella classe gara si devono creare degli array delle auto e impostare casualmente il vincitore e mostrarlo a schermo nel metodo main
+
+il pilote oltr al nome deve avere un tot di vittorie, restituite nel main quando vince la gara
+
+fare in modo che nel main chiamando la classe gara quando non impostiamo pilolti ritorni un messaggio di errore
+
+fare due gare nel metodo main
+
+impostare nell'esercicio una qualche attributo final, e static final
