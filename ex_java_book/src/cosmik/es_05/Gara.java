@@ -37,14 +37,18 @@ public class Gara {
 		}
 	}
 
-	//il metodo setTempo mi ritornerà il tempoGara con valore casuale fra 2 e 5
+	//il metodo setTempo mi ~~ritornerà~~ setta il tempoGara con valore casuale fra 2 e 5
 	//una garà non durerà meno di 2 ore
 	private void setTempo () { // perche' setTempo e' private?
-		int t = (int)(Math.random()*5);
+		/*int t = (int)(Math.random()*5);
 		while (t < 2) {
 			t = (int)(Math.random()*5);
-		}
-		tempoGara = t;
+		}*/
+		// Il codice sopra e' sbagliato, si fa cosi' un numero casuale tra 2 e 5, se non hai Random.nextInt(int,int)
+		tempoGara = (int)(Math.random() * 3.0 + 2.5);
+		// Aggiungo 0.5 perche' il cast da double a int taglia totalmente la parte decimale
+		// in questo modo posso approssimare per eccesso se supero 0.5
+		// Per come hai scritto tu, teoricamente il codice potrebbe andare in loop infinito, e' non e' mai bella cosa
 	}
 
 	public String getRisultato(){
