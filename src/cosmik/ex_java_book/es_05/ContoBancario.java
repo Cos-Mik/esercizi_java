@@ -1,4 +1,4 @@
-package cosmik.es_05;
+package cosmik.ex_java_book.es_05;
 
 public class ContoBancario {
 	private int numero_conto;
@@ -23,7 +23,7 @@ public class ContoBancario {
 		return "Dettagli del conto:\nNome:\t"+nome+"\nCognome:\t"+cognome+"\nNumero di conto:\t"+numero_conto+"\n\t\tTotale: \t E. "+totaleconto;
 	}
 
-	public void tryAccess(int codice_inserito) {
+	public void tryAccess(int codice_inserito) throws Exception {
 		if (codice_inserito != PASSWORD) {
 			// Qua sarebbe buono creare un'eccezione speciale per un accesso errato
 			throw new Exception("Errore: la password non e' corretta!"); 

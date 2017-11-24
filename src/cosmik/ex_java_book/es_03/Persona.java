@@ -1,4 +1,4 @@
-package cosmik.es_03;
+package cosmik.ex_java_book.es_03;
 
 public class Persona {
 	public String nome, cognome;

@@ -1,4 +1,4 @@
-package cosmik.es_02;
+package cosmik.ex_java_book.es_02;
 
 public class NumeroIntero {
 	public int numeroIntero;

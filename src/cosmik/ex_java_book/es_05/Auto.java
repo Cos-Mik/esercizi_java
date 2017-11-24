@@ -1,4 +1,4 @@
-package cosmik.es_05;
+package cosmik.ex_java_book.es_05;
 
 public class Auto {
 	private String scuderia;

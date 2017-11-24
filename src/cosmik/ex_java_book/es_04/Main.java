@@ -1,4 +1,4 @@
-package cosmik.es_04;
+package cosmik.ex_java_book.es_04;
 
 public class Main {
 	public static void main(String[] args) {

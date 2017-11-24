@@ -1,4 +1,4 @@
-package cosmik.es_02;
+package cosmik.ex_java_book.es_02;
 
 public class Auto {
 	public static final int NUMERO_RUOTE = 4;

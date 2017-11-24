@@ -1,4 +1,4 @@
-package cosmik.es_05;
+package cosmik.ex_java_book.es_05;
 
 public class Gara {
 	private String nomeGara;
